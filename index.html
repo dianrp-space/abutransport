@@ -406,7 +406,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 CV. Abu Multi Jasa Trans (Abu Transport). All rights reserved.</p>
+          <p>&copy; <span id="footerYear">2026</span> CV. Abu Multi Jasa Trans (Abu Transport). All rights reserved.</p>
           <p>Rental Mobil Pekanbaru</p>
           <p>Made by <a href="https://dianrp.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;font-weight:600;">dianrp.com</a></p>
         </div>
@@ -508,6 +508,7 @@
             navToggle.setAttribute('aria-label', 'Buka menu');
           });
         });
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
       })();
     </script>
 
