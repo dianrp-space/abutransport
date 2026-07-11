@@ -29,16 +29,14 @@
     <link rel="icon" type="image/webp" href="images/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
 
-    <header class="site-header container reveal">
+    <header class="site-header">
       <a href="#" class="brand" aria-label="Abu Transport Home">
-        <img src="images/logo (1).webp" alt="Logo Abu Transport Rental Mobil Pekanbaru" class="brand-logo" />
+        <img src="images/logo%20(1).webp" alt="Logo Abu Transport Rental Mobil Pekanbaru" class="brand-logo" />
         <div>
           <p class="brand-name">CV. Abu Multi Jasa Trans</p>
           <p class="brand-sub">Abu Transport</p>
@@ -49,7 +47,7 @@
         <a href="#armada">Mobil</a>
         <a href="#lokasi">Lokasi</a>
       </nav>
-      <a class="btn btn-header" href="#booking">Booking Sekarang</a>
+      <a class="btn btn-primary btn-sm" href="#booking">Booking Sekarang</a>
       <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -57,143 +55,359 @@
       </button>
     </header>
 
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">&#8593;</button>
-
     <a href="https://wa.me/6282386341699" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
     </a>
 
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
     <main>
       <section class="section container" id="carousel-layanan">
-        <div class="carousel reveal delay-1" aria-label="Carousel armada Abu Transport">
-          <button class="carousel-btn" id="prevSlide" aria-label="Slide sebelumnya">&#10094;</button>
-          <div class="carousel-track" id="carouselTrack">
-            <article class="slide active">
-              <img src="images/armada.webp" alt="Armada Abu Transport" class="slide-img" />
-              <h3>Armada</h3>
-              <p>Berbagai pilihan armada untuk kebutuhan transportasi Anda.</p>
-            </article>
-            <article class="slide">
-              <img src="images/hiace.webp" alt="Toyota Hiace Abu Transport" class="slide-img" />
-              <h3>Toyota Hiace</h3>
-              <p>Untuk perjalanan rombongan dan wisata dengan kapasitas besar.</p>
-            </article>
-            <article class="slide">
-              <img src="images/xenia.webp" alt="Daihatsu Xenia Abu Transport" class="slide-img" />
-              <h3>Daihatsu Xenia</h3>
-              <p>MPV keluarga yang nyaman untuk perjalanan harian maupun luar kota.</p>
-            </article>
-            <article class="slide">
-              <img src="images/pickup.webp" alt="Pickup Angkutan Barang Abu Transport" class="slide-img" />
-              <h3>Pickup Angkutan Barang</h3>
-              <p>Layanan angkutan barang dalam dan luar kota.</p>
-            </article>
+        <div class="carousel reveal" aria-label="Carousel armada Abu Transport">
+          <div class="carousel-inner">
+            <div class="carousel-track" id="carouselTrack">
+              <article class="slide active">
+                <img src="images/armada.webp" alt="Armada Abu Transport" class="slide-img" />
+                <div class="slide-content">
+                  <h3>Armada Lengkap</h3>
+                  <p>Berbagai pilihan armada untuk kebutuhan transportasi Anda, dari city car hingga bus pariwisata.</p>
+                </div>
+              </article>
+              <article class="slide">
+                <img src="images/hiace.webp" alt="Toyota Hiace Abu Transport" class="slide-img" />
+                <div class="slide-content">
+                  <h3>Toyota Hiace</h3>
+                  <p>Untuk perjalanan rombongan dan wisata dengan kapasitas besar dan kenyamanan maksimal.</p>
+                </div>
+              </article>
+              <article class="slide">
+                <img src="images/xenia.webp" alt="Daihatsu Xenia Abu Transport" class="slide-img" />
+                <div class="slide-content">
+                  <h3>Daihatsu Xenia</h3>
+                  <p>MPV keluarga yang nyaman untuk perjalanan harian maupun luar kota dengan harga terjangkau.</p>
+                </div>
+              </article>
+              <article class="slide">
+                <img src="images/pickup.webp" alt="Pickup Angkutan Barang Abu Transport" class="slide-img" />
+                <div class="slide-content">
+                  <h3>Pickup Angkutan Barang</h3>
+                  <p>Layanan angkutan barang dalam dan luar kota untuk kebutuhan logistik Anda.</p>
+                </div>
+              </article>
+            </div>
           </div>
-          <button class="carousel-btn" id="nextSlide" aria-label="Slide berikutnya">&#10095;</button>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevSlide" aria-label="Slide sebelumnya">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-dots" id="carouselDots" aria-label="Navigasi carousel"></div>
+            <button class="carousel-btn" id="nextSlide" aria-label="Slide berikutnya">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="carousel-dots" id="carouselDots" aria-label="Navigasi carousel"></div>
       </section>
 
       <section class="hero container">
-        <div class="hero-copy reveal delay-1">
-          <p class="eyebrow">Rental Mobil Pekanbaru</p>
-          <h1>Mudah, murah, bersahabat, pelayanan prima</h1>
-          <p class="hero-text">Solusi transportasi harian, mingguan, hingga bulanan untuk kebutuhan pribadi, keluarga, perjalanan bisnis, wisata, dan logistik dalam maupun luar kota.</p>
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/6282386341699" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
-            <a class="btn btn-outline" href="tel:082386341699">Call 0823-8634-1699</a>
+        <div class="hero-grid">
+          <div class="hero-copy reveal delay-1">
+            <p class="eyebrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Rental Mobil Pekanbaru
+            </p>
+            <h1>Mudah, murah, bersahabat, pelayanan prima</h1>
+            <p class="hero-text">Solusi transportasi harian, mingguan, hingga bulanan untuk kebutuhan pribadi, keluarga, perjalanan bisnis, wisata, dan logistik dalam maupun luar kota.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="https://wa.me/6282386341699?text=Halo%2C%20Abutransport.%20Saya%20mau%20tanya..." target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat WhatsApp
+              </a>
+              <a class="btn btn-outline btn-lg" href="tel:082386341699">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call 0823-8634-1699
+              </a>
+            </div>
           </div>
+          <aside class="hero-card reveal delay-2">
+            <h2>Layanan Utama</h2>
+            <ul>
+              <li>Lepas kunci</li>
+              <li>Include driver</li>
+              <li>Grouping</li>
+              <li>Carteran</li>
+            </ul>
+            <div class="divider"></div>
+            <p><strong>Alamat:</strong> Jl. Melati II, Panam, Pekanbaru</p>
+            <p><strong>Buka:</strong> 24 Jam</p>
+            <a href="https://instagram.com/abutransport" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg class="ig-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @abutransport
+            </a>
+          </aside>
         </div>
-        <aside class="hero-card reveal delay-2">
-          <h2>Layanan Utama</h2>
-          <ul><li>Lepas kunci</li><li>Include driver</li><li>Grouping</li><li>Carteran</li></ul>
-          <div class="divider"></div>
-          <p><strong>Alamat:</strong> Jl. Melati II, Panam, Pekanbaru</p>
-          <p><a href="https://instagram.com/abutransport" target="_blank" rel="noopener noreferrer" class="social-link"><svg class="ig-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> @abutransport</a></p>
-        </aside>
       </section>
 
       <section class="section container reveal delay-3" id="tentang">
-        <h2>Tentang Abu Transport</h2>
-        <p>CV. Abu Multi Jasa Trans (Abu Transport) menyediakan pelayanan jasa rental/sewa mobil lepas kunci maupun lengkap dengan driver dengan sistem sewa harian (24 jam) dan bulanan.</p>
-      </section>
-
-      <section class="section container">
-        <h2 class="reveal">Menyediakan Jasa</h2>
-        <div class="grid cards">
-          <article class="card reveal delay-1"><h3>Rental Mobil</h3><p>Lepas kunci atau dengan driver.</p></article>
-          <article class="card reveal delay-2"><h3>Carteran</h3><p>Untuk kebutuhan perjalanan khusus dan fleksibel.</p></article>
-          <article class="card reveal delay-3"><h3>Dropingan</h3><p>Dalam kota dan luar kota.</p></article>
-          <article class="card reveal delay-1"><h3>Angkutan Barang</h3><p>Layanan pickup dalam dan luar kota.</p></article>
-          <article class="card reveal delay-2"><h3>Travel</h3><p>Perjalanan antarkota yang nyaman dan aman.</p></article>
-          <article class="card reveal delay-3"><h3>Paket Wisata</h3><p>Paket transportasi wisata dan kebutuhan rombongan.</p></article>
+        <div class="section-header text-left">
+          <h2>Tentang Abu Transport</h2>
+          <p>CV. Abu Multi Jasa Trans (Abu Transport) menyediakan pelayanan jasa rental/sewa mobil lepas kunci maupun lengkap dengan driver dengan sistem sewa harian (24 jam) dan bulanan.</p>
         </div>
       </section>
 
       <section class="section container">
-        <h2 class="reveal">Paket dan Durasi Rental</h2>
-        <div class="grid split">
-          <article class="panel reveal delay-1"><h3>Melayani Rental</h3><ul><li>Harian</li><li>Mingguan</li><li>Bulanan</li></ul></article>
-          <article class="panel reveal delay-2"><h3>Paket Transportasi</h3><ul><li>Wisata</li><li>Carteran</li><li>Dropingan</li></ul></article>
-          <article class="panel reveal delay-3"><h3>Paket Driver</h3><ul><li>Driver only</li></ul></article>
-          <article class="panel reveal delay-1"><h3>Bus Pariwisata</h3><ul><li>Wisata</li><li>Dan kebutuhan lainnya</li></ul></article>
+        <div class="section-header reveal">
+          <h2>Menyediakan Jasa</h2>
+          <p>Solusi transportasi lengkap untuk berbagai kebutuhan Anda</p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card reveal delay-1">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.5 11.5 2 12 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+            </div>
+            <h3>Rental Mobil</h3>
+            <p>Lepas kunci atau dengan driver, sesuai kebutuhan perjalanan Anda.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3>Carteran</h3>
+            <p>Untuk kebutuhan perjalanan khusus dan fleksibel sesuai jadwal Anda.</p>
+          </article>
+          <article class="card reveal delay-3">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9H9l-3-9H2"/><path d="M5.1 5.2A7 7 0 0 1 12 3a7 7 0 0 1 6.9 6.2"/></svg>
+            </div>
+            <h3>Dropingan</h3>
+            <p>Layanan dropingan dalam kota dan luar kota dengan harga bersaing.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Angkutan Barang</h3>
+            <p>Layanan pickup untuk angkutan barang dalam dan luar kota.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            </div>
+            <h3>Travel</h3>
+            <p>Perjalanan antarkota yang nyaman, aman, dan tepat waktu.</p>
+          </article>
+          <article class="card reveal delay-3">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Paket Wisata</h3>
+            <p>Paket transportasi wisata dan kebutuhan rombongan dengan itinerary fleksibel.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-header reveal">
+          <h2>Paket dan Durasi Rental</h2>
+          <p>Sewa fleksibel sesuai kebutuhan Anda</p>
+        </div>
+        <div class="grid cards-4">
+          <article class="panel reveal delay-1">
+            <h3>Melayani Rental</h3>
+            <ul>
+              <li>Harian</li>
+              <li>Mingguan</li>
+              <li>Bulanan</li>
+            </ul>
+          </article>
+          <article class="panel reveal delay-2">
+            <h3>Paket Transportasi</h3>
+            <ul>
+              <li>Wisata</li>
+              <li>Carteran</li>
+              <li>Dropingan</li>
+            </ul>
+          </article>
+          <article class="panel reveal delay-3">
+            <h3>Paket Driver</h3>
+            <ul>
+              <li>Driver only</li>
+            </ul>
+          </article>
+          <article class="panel reveal delay-4">
+            <h3>Bus Pariwisata</h3>
+            <ul>
+              <li>Wisata</li>
+              <li>Dan kebutuhan lainnya</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section class="section container" id="armada">
-        <h2 class="reveal">Armada</h2>
-        <p class="reveal delay-1 section-intro">Pilihan armada untuk kebutuhan personal, keluarga, wisata, dan operasional.</p>
-        <div class="grid fleet-grid">
-          <article class="card reveal delay-1"><h3>City Car</h3><p>Brio / Agya / sekelas</p></article>
-          <article class="card reveal delay-2"><h3>MPV</h3><p>Avanza / Xenia / sekelas</p></article>
-          <article class="card reveal delay-3"><h3>Family MPV</h3><p>Innova Reborn / sekelas</p></article>
-          <article class="card reveal delay-1"><h3>Pickup Angkutan Barang</h3><p>Dalam kota dan luar kota</p></article>
-          <article class="card reveal delay-2"><h3>Bus Pariwisata</h3><p>Wisata dan rombongan</p></article>
-          <article class="card reveal delay-3"><h3>Paket Driver Only</h3><p>Untuk mobil pribadi customer</p></article>
+        <div class="section-header reveal">
+          <h2>Armada</h2>
+          <p>Pilihan armada untuk kebutuhan personal, keluarga, wisata, dan operasional</p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card reveal delay-1">
+            <h3>City Car</h3>
+            <p>Brio / Agya / sekelas &mdash; ekonomis untuk perjalanan pribadi</p>
+          </article>
+          <article class="card reveal delay-2">
+            <h3>MPV</h3>
+            <p>Avanza / Xenia / sekelas &mdash; nyaman untuk keluarga kecil</p>
+          </article>
+          <article class="card reveal delay-3">
+            <h3>Family MPV</h3>
+            <p>Innova Reborn / sekelas &mdash; premium untuk perjalanan jauh</p>
+          </article>
+          <article class="card reveal delay-1">
+            <h3>Pickup Angkutan Barang</h3>
+            <p>Dalam kota dan luar kota untuk kebutuhan logistik</p>
+          </article>
+          <article class="card reveal delay-2">
+            <h3>Bus Pariwisata</h3>
+            <p>Wisata dan rombongan dengan kapasitas besar</p>
+          </article>
+          <article class="card reveal delay-3">
+            <h3>Paket Driver Only</h3>
+            <p>Untuk mobil pribadi customer yang butuh sopir</p>
+          </article>
         </div>
       </section>
 
       <section class="section container">
         <div class="requirements reveal">
           <h2>Persyaratan Rental</h2>
-          <p>SIM, KTP, atau dokumen pendukung lainnya sesuai ketentuan.</p>
-          <a class="btn" href="https://wa.me/6282386341699" target="_blank" rel="noopener noreferrer">Konsultasi Persyaratan</a>
+          <p>SIM, KTP, atau dokumen pendukung lainnya sesuai ketentuan. Konsultasikan kebutuhan Anda dengan tim kami.</p>
+          <a class="btn btn-primary btn-lg" href="https://wa.me/6282386341699?text=Halo%2C%20Abutransport.%20Saya%20mau%20tanya..." target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Konsultasi Persyaratan
+          </a>
         </div>
       </section>
 
       <section class="section container" id="booking">
-        <h2 class="reveal">Form Booking Cepat</h2>
+        <div class="section-header reveal">
+          <h2>Form Booking Cepat</h2>
+          <p>Isi form di bawah ini dan kami akan memproses pesanan Anda segera</p>
+        </div>
         <form class="booking-form reveal delay-1" id="bookingForm">
           <div class="form-grid">
-            <label>Nama<input type="text" name="nama" placeholder="Nama lengkap" required /></label>
-            <label>Nomor WhatsApp<input type="tel" name="wa" placeholder="08xxxxxxxxxx" required /></label>
-            <label>Layanan<select name="layanan" required><option value="">Pilih layanan</option><option>Rental lepas kunci</option><option>Rental include driver</option><option>Carteran</option><option>Dropingan</option><option>Travel</option><option>Angkutan barang</option><option>Paket wisata</option><option>Bus pariwisata</option></select></label>
-            <label>Tanggal mulai<input type="date" name="tanggal" required /></label>
-            <label>Durasi<select name="durasi" required><option value="">Pilih durasi</option><option>Harian</option><option>Mingguan</option><option>Bulanan</option></select></label>
-            <label>Armada<select name="armada" required><option value="">Pilih armada</option><option>City Car</option><option>MPV</option><option>Family MPV</option><option>Pickup</option><option>Bus Pariwisata</option></select></label>
+            <label>
+              Nama
+              <input type="text" name="nama" placeholder="Nama lengkap" required />
+            </label>
+            <label>
+              Nomor WhatsApp
+              <input type="tel" name="wa" placeholder="08xxxxxxxxxx" required />
+            </label>
+            <label>
+              Layanan
+              <select name="layanan" required>
+                <option value="">Pilih layanan</option>
+                <option>Rental lepas kunci</option>
+                <option>Rental include driver</option>
+                <option>Carteran</option>
+                <option>Dropingan</option>
+                <option>Travel</option>
+                <option>Angkutan barang</option>
+                <option>Paket wisata</option>
+                <option>Bus pariwisata</option>
+              </select>
+            </label>
+            <label>
+              Tanggal mulai
+              <input type="date" name="tanggal" required />
+            </label>
+            <label>
+              Durasi
+              <select name="durasi" required>
+                <option value="">Pilih durasi</option>
+                <option>Harian</option>
+                <option>Mingguan</option>
+                <option>Bulanan</option>
+              </select>
+            </label>
+            <label>
+              Armada
+              <select name="armada" required>
+                <option value="">Pilih armada</option>
+                <option>City Car</option>
+                <option>MPV</option>
+                <option>Family MPV</option>
+                <option>Pickup</option>
+                <option>Bus Pariwisata</option>
+              </select>
+            </label>
           </div>
-          <label>Catatan Tambahan<textarea name="catatan" rows="4" placeholder="Contoh: Jemput bandara, tujuan luar kota, jumlah penumpang, dll"></textarea></label>
-          <button type="submit" class="btn">Kirim Booking via WhatsApp</button>
+          <label>
+            Catatan Tambahan
+            <textarea name="catatan" rows="3" placeholder="Contoh: Jemput bandara, tujuan luar kota, jumlah penumpang, dll"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Kirim Booking via WhatsApp
+          </button>
         </form>
       </section>
 
       <section class="section container" id="lokasi">
-        <h2 class="reveal">Lokasi Kami</h2>
-        <p class="reveal delay-1 section-intro">Jl. Melati II, Panam, Pekanbaru</p>
-        <a class="btn btn-outline map-link reveal delay-1" href="https://www.google.com/maps?q=0.481374,101.371407&t=k" target="_blank" rel="noopener noreferrer">Buka di Google Maps</a>
+        <div class="section-header reveal">
+          <h2>Lokasi Kami</h2>
+          <p>Jl. Melati II, Panam, Pekanbaru &mdash; Buka 24 jam setiap hari</p>
+        </div>
+        <div style="text-align:center;margin-bottom:1rem;" class="reveal delay-1">
+          <a class="btn btn-outline" href="https://www.google.com/maps?q=0.481374,101.371407&t=k" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Buka di Google Maps
+          </a>
+        </div>
         <div class="map-wrap reveal delay-2">
           <iframe title="Google Maps Abu Transport" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=0.481374,101.371407&t=k&z=18&output=embed"></iframe>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer container reveal">
-      <p>CV. Abu Multi Jasa Trans (Abu Transport)</p>
-      <p>Kontak: 082386341699 (Call/WA)</p>
-      <p>Alamat: Jl. Melati II, Panam, Pekanbaru</p>
-      <p><a href="https://instagram.com/abutransport" target="_blank" rel="noopener noreferrer" class="social-link"><svg class="ig-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> @abutransport</a></p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="brand" aria-label="Abu Transport Home">
+              <img src="images/logo%20(1).webp" alt="Logo Abu Transport" class="brand-logo" />
+              <div>
+                <p class="brand-name">CV. Abu Multi Jasa Trans</p>
+                <p class="brand-sub">Abu Transport</p>
+              </div>
+            </a>
+            <p>Jasa rental mobil Pekanbaru terpercaya. Melayani lepas kunci, include driver, carteran, dropingan, travel, paket wisata, angkutan barang, dan bus pariwisata.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#armada">Armada</a></li>
+              <li><a href="#booking">Booking</a></li>
+              <li><a href="#lokasi">Lokasi</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontak</h4>
+            <ul>
+              <li><a href="https://wa.me/6282386341699?text=Halo%2C%20Abutransport.%20Saya%20mau%20tanya..." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="tel:082386341699">Telpon</a></li>
+              <li><a href="https://instagram.com/abutransport" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 CV. Abu Multi Jasa Trans (Abu Transport). All rights reserved.</p>
+          <p>Rental Mobil Pekanbaru &mdash; Made by <a href="https://dianrp.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;font-weight:600;">dianrp.com</a></p>
+        </div>
+      </div>
     </footer>
 
     <script>
@@ -216,9 +430,11 @@
           });
         }
 
+        const track = document.getElementById('carouselTrack');
+
         function goTo(i) {
           index = (i + slides.length) % slides.length;
-          slides.forEach((slide, idx) => { slide.classList.toggle('active', idx === index); });
+          track.style.transform = 'translateX(-' + (index * 100) + '%)';
           const dots = dotsContainer.querySelectorAll('.dot');
           dots.forEach((dot, idx) => { dot.classList.toggle('active', idx === index); });
         }
@@ -241,9 +457,8 @@
         nextBtn.addEventListener('click', next);
         prevBtn.addEventListener('click', prev);
 
-        const carousel = document.getElementById('carouselTrack');
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
+        track.addEventListener('mouseenter', stopAutoPlay);
+        track.addEventListener('mouseleave', startAutoPlay);
 
         const bookingForm = document.getElementById('bookingForm');
         bookingForm.addEventListener('submit', function (event) {
